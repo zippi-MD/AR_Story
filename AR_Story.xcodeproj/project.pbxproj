@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69989E7323D93DBA00093D37 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 69989E7223D93DBA00093D37 /* art.scnassets */; };
 		D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */; };
 		D48DD9BE23D8CCC7001AD2AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BD23D8CCC7001AD2AC /* SceneDelegate.swift */; };
 		D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BF23D8CCC7001AD2AC /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69989E7223D93DBA00093D37 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		D48DD9B823D8CCC7001AD2AC /* AR_Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Story.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48DD9BD23D8CCC7001AD2AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D48DD9C423D8CCCB001AD2AC /* Assets.xcassets */,
 				D48DD9C623D8CCCB001AD2AC /* LaunchScreen.storyboard */,
 				D48DD9C923D8CCCB001AD2AC /* Info.plist */,
+				69989E7223D93DBA00093D37 /* art.scnassets */,
 			);
 			path = AR_Story;
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69989E7323D93DBA00093D37 /* art.scnassets in Resources */,
 				D48DD9C823D8CCCB001AD2AC /* LaunchScreen.storyboard in Resources */,
 				D48DD9C523D8CCCB001AD2AC /* Assets.xcassets in Resources */,
 				D48DD9C323D8CCC7001AD2AC /* Main.storyboard in Resources */,

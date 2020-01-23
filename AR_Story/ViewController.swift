@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import ARKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController , ARSCNViewDelegate {
+    @IBOutlet weak var sceneView: ARSCNView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        sceneView.delegate = self
+        
+        
     }
 
 
