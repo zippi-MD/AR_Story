@@ -70,14 +70,15 @@ class ViewController: UIViewController , ARSCNViewDelegate {
             node.addChildNode(planeNode)
             var temporalNode: SCNNode?
            
-            if (imageAnchor.referenceImage.name == "libro3"){
+            if (imageAnchor.referenceImage.name == "libro 3"){
                 foxNode?.scale = SCNVector3(0.2,0.2,0.2)
                 foxNode?.addAnimationPlayer(idleAnimation, forKey: "idle")
                 temporalNode = foxNode
                 
                 
             }else if (imageAnchor.referenceImage.name == "pikachu"){
-              batmanNode?.scale = SCNVector3(0.2, 0.2, 0.2)
+           
+                
               temporalNode = batmanNode
             }else{
                 
