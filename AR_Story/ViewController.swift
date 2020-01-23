@@ -125,11 +125,17 @@ class ViewController: UIViewController , ARSCNViewDelegate {
                // highlight it
                SCNTransaction.begin()
                SCNTransaction.animationDuration = 0.5
-               
+            
                // on completion - unhighlight
-              
+               if (result.node.name == nil){
+                    
+                  material.emission.contents = UIColor.blue
+                      
+                
+                                 
+                }
                
-               material.emission.contents = UIColor.blue
+               
                
                SCNTransaction.commit()
             }
