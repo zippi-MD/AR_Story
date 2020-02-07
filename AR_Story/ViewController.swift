@@ -12,13 +12,13 @@ import ARKit
 class ViewController: UIViewController , ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
-    let idleAnimation = loadAnimation(fromSceneNamed: "art.scnassets/character/max_idle.scn")
-           
-    let walkAnimation = loadAnimation(fromSceneNamed: "art.scnassets/character/max_walk.scn")
+//    let idleAnimation = loadAnimation(fromSceneNamed: "art.scnassets/character/max_idle.scn")
+//
+//    let walkAnimation = loadAnimation(fromSceneNamed: "art.scnassets/character/max_walk.scn")
     
     var batmanNode = SCNScene(named: "art.scnassets/obj/batman.scn")?.rootNode.childNodes[0]
-    var foxNode =  SCNScene(named: "art.scnassets/character/max.scn")?.rootNode.childNodes[0]
-    
+    var foxNode =   FoxCharacter()
+    var distance: Float = 0.01
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,9 +71,11 @@ class ViewController: UIViewController , ARSCNViewDelegate {
             var temporalNode: SCNNode?
            
             if (imageAnchor.referenceImage.name == "libro 3"){
-                foxNode?.scale = SCNVector3(0.2,0.2,0.2)
-                foxNode?.addAnimationPlayer(idleAnimation, forKey: "idle")
-                temporalNode = foxNode
+                
+                foxNode.node?.scale = SCNVector3(0.2,0.2,0.2)
+                foxNode.node?.addAnimationPlayer(foxNode.idleAnimation, forKey: "idle")
+                
+                temporalNode = foxNode.node
                 
                 
             }else if (imageAnchor.referenceImage.name == "pikachu"){
@@ -113,13 +115,13 @@ class ViewController: UIViewController , ARSCNViewDelegate {
                let material = result.node.geometry!.firstMaterial!
               
               if (result.node.name != nil){
-                  if (result.node.name! == "Max"){
-                  
-                   
-                      result.node.parent?.removeAllAnimations()
-                      result.node.parent?.addAnimationPlayer(walkAnimation, forKey: "walk")
-                      
-                  }
+//                  if (result.node.name! == "Max"){
+//
+//
+//                      result.node.parent?.removeAllAnimations()
+//                    result.node.parent?.addAnimationPlayer(foxNode.walkAnimation, forKey: "walk")
+//
+//                  }
                    
               }
                // highlight it
@@ -142,19 +144,61 @@ class ViewController: UIViewController , ARSCNViewDelegate {
          }
     
     
+    @IBAction func directionButtons(_ sender: UIButton) {
+        var positionTemp : Float = 0
+        switch sender.tag {
+        case 0:
+             foxNode.node?.removeAllAnimations()
+             positionTemp =  (foxNode.node?.position.x)! + distance
+             SCNTransaction.animationDuration = 1.0
+             if(foxNode.node?.eulerAngles.y == -.pi / 2 ){
+               foxNode.node?.position = SCNVector3(positionTemp, (foxNode.node?.position.y)! , (foxNode.node?.position.z)! )
+                    foxNode.node?.addAnimationPlayer(foxNode.walkAnimation, forKey: "walk")
+             }
+             
+             foxNode.node?.eulerAngles.y = -.pi / 2
+            
+            
+            
+        case 1:
+             foxNode.node?.removeAllAnimations()
+             positionTemp =  (foxNode.node?.position.z)! - distance
+             SCNTransaction.animationDuration = 1.0
+             
+             if(foxNode.node?.eulerAngles.y == +.pi ){
+            
+                 foxNode.node?.position = SCNVector3( (foxNode.node?.position.x)!, (foxNode.node?.position.y)! ,positionTemp )
+                 foxNode.node?.addAnimationPlayer(foxNode.walkAnimation, forKey: "walk")
+                
+             }
+             foxNode.node?.eulerAngles.y = +.pi
+             
+            
+        case 2:
+             foxNode.node?.removeAllAnimations()
+             positionTemp =  (foxNode.node?.position.z)! + distance
+             SCNTransaction.animationDuration = 1.0
+             if(foxNode.node?.eulerAngles.y == 0 ){
+                 foxNode.node?.position = SCNVector3( (foxNode.node?.position.x)!, (foxNode.node?.position.y)! ,positionTemp )
+                 foxNode.node?.addAnimationPlayer(foxNode.walkAnimation, forKey: "walk")
+             }
+             foxNode.node?.eulerAngles.y = 0
+        case 3:
+             foxNode.node?.removeAllAnimations()
+             positionTemp =  (foxNode.node?.position.x)! - distance
+             SCNTransaction.animationDuration = 1.0
+             if(foxNode.node?.eulerAngles.y == +.pi / 2 ){
+                 foxNode.node?.position = SCNVector3(positionTemp, (foxNode.node?.position.y)! , (foxNode.node?.position.z)! )
+                 foxNode.node?.addAnimationPlayer(foxNode.walkAnimation, forKey: "walk")
+             }
+            foxNode.node?.eulerAngles.y = +.pi / 2
+        default:
+            foxNode.node?.position = SCNVector3(0,0,0)
+        }
+        
+        
+        
+    }
     
 }
 
-//----------Animations----------
- func loadAnimation(fromSceneNamed sceneName: String) -> SCNAnimationPlayer {
-    let scene = SCNScene( named: sceneName )!
-    // find top level animation
-    var animationPlayer: SCNAnimationPlayer! = nil
-    scene.rootNode.enumerateChildNodes { (child, stop) in
-        if !child.animationKeys.isEmpty {
-            animationPlayer = child.animationPlayer(forKey: child.animationKeys[0])
-            stop.pointee = true
-        }
-    }
-    return animationPlayer
-}
