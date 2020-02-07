@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		694B8DFD23EA0E8F00D4C236 /* CharacterClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694B8DFC23EA0E8F00D4C236 /* CharacterClass.swift */; };
 		69989E7323D93DBA00093D37 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 69989E7223D93DBA00093D37 /* art.scnassets */; };
 		D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */; };
 		D48DD9BE23D8CCC7001AD2AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BD23D8CCC7001AD2AC /* SceneDelegate.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		694B8DFC23EA0E8F00D4C236 /* CharacterClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClass.swift; sourceTree = "<group>"; };
 		69989E7223D93DBA00093D37 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		D48DD9B823D8CCC7001AD2AC /* AR_Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Story.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,7 +66,6 @@
 				D48DD9C623D8CCCB001AD2AC /* LaunchScreen.storyboard */,
 				D48DD9C923D8CCCB001AD2AC /* Info.plist */,
 				69989E7223D93DBA00093D37 /* art.scnassets */,
-				694B8DFC23EA0E8F00D4C236 /* CharacterClass.swift */,
 			);
 			path = AR_Story;
 			sourceTree = "<group>";
@@ -147,7 +144,6 @@
 			files = (
 				D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */,
 				D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */,
-				694B8DFD23EA0E8F00D4C236 /* CharacterClass.swift in Sources */,
 				D48DD9BE23D8CCC7001AD2AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +289,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LG4XTB94FF;
+				DEVELOPMENT_TEAM = 59JWRUY5S9;
 				INFOPLIST_FILE = AR_Story/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +309,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59JWRUY5S9;
 				INFOPLIST_FILE = AR_Story/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
