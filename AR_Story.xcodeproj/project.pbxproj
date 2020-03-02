@@ -14,6 +14,8 @@
 		D48DD9C323D8CCC7001AD2AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48DD9C123D8CCC7001AD2AC /* Main.storyboard */; };
 		D48DD9C523D8CCCB001AD2AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48DD9C423D8CCCB001AD2AC /* Assets.xcassets */; };
 		D48DD9C823D8CCCB001AD2AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48DD9C623D8CCCB001AD2AC /* LaunchScreen.storyboard */; };
+		D4B9D2F8240D7312005E95EC /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D2F7240D7312005E95EC /* BookView.swift */; };
+		D4B9D2FA240D7327005E95EC /* BookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D2F9240D7327005E95EC /* BookView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		D48DD9C423D8CCCB001AD2AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48DD9C723D8CCCB001AD2AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48DD9C923D8CCCB001AD2AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4B9D2F7240D7312005E95EC /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		D4B9D2F9240D7327005E95EC /* BookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		D48DD9BA23D8CCC7001AD2AC /* AR_Story */ = {
 			isa = PBXGroup;
 			children = (
+				D4B9D2F2240D70BA005E95EC /* Book */,
 				D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */,
 				D48DD9BD23D8CCC7001AD2AC /* SceneDelegate.swift */,
 				D48DD9BF23D8CCC7001AD2AC /* ViewController.swift */,
@@ -68,6 +73,15 @@
 				69989E7223D93DBA00093D37 /* art.scnassets */,
 			);
 			path = AR_Story;
+			sourceTree = "<group>";
+		};
+		D4B9D2F2240D70BA005E95EC /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9D2F7240D7312005E95EC /* BookView.swift */,
+				D4B9D2F9240D7327005E95EC /* BookView.xib */,
+			);
+			path = Book;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69989E7323D93DBA00093D37 /* art.scnassets in Resources */,
+				D4B9D2FA240D7327005E95EC /* BookView.xib in Resources */,
 				D48DD9C823D8CCCB001AD2AC /* LaunchScreen.storyboard in Resources */,
 				D48DD9C523D8CCCB001AD2AC /* Assets.xcassets in Resources */,
 				D48DD9C323D8CCC7001AD2AC /* Main.storyboard in Resources */,
@@ -145,6 +160,7 @@
 				D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */,
 				D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */,
 				D48DD9BE23D8CCC7001AD2AC /* SceneDelegate.swift in Sources */,
+				D4B9D2F8240D7312005E95EC /* BookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
