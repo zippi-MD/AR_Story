@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Story Page View Controller-->
+        <scene sceneID="2q3-uu-66c">
+            <objects>
+                <viewController id="xVY-ga-i79" customClass="StoryPageViewController" customModule="AR_Story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yif-a4-tKD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Once upon a time..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gb9-ho-74E">
+                                <rect key="frame" x="32" y="76" width="350" height="392"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Gb9-ho-74E" firstAttribute="top" secondItem="phg-ar-ATq" secondAttribute="top" constant="32" id="69h-Gr-hQL"/>
+                            <constraint firstItem="Gb9-ho-74E" firstAttribute="leading" secondItem="phg-ar-ATq" secondAttribute="leading" constant="32" id="Ff0-7W-jPQ"/>
+                            <constraint firstItem="phg-ar-ATq" firstAttribute="bottom" secondItem="Gb9-ho-74E" secondAttribute="bottom" constant="32" id="kwu-wF-n4N"/>
+                            <constraint firstItem="phg-ar-ATq" firstAttribute="trailing" secondItem="Gb9-ho-74E" secondAttribute="trailing" constant="32" id="qTD-fX-udo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="phg-ar-ATq"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="giS-yF-LJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="-227"/>
+        </scene>
+        <!--Story Image View Controller-->
+        <scene sceneID="Lze-qd-wwl">
+            <objects>
+                <viewController id="ZtQ-L4-bEk" customClass="StoryImageViewController" customModule="AR_Story" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MrH-jH-13i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-se-fYX">
+                                <rect key="frame" x="32" y="76" width="350" height="392"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6ab-se-fYX" firstAttribute="leading" secondItem="Klu-Jz-beF" secondAttribute="leading" constant="32" id="HC2-hS-ya8"/>
+                            <constraint firstItem="6ab-se-fYX" firstAttribute="top" secondItem="Klu-Jz-beF" secondAttribute="top" constant="32" id="V7d-JU-1p6"/>
+                            <constraint firstItem="Klu-Jz-beF" firstAttribute="trailing" secondItem="6ab-se-fYX" secondAttribute="trailing" constant="32" id="ns4-dp-OmR"/>
+                            <constraint firstItem="Klu-Jz-beF" firstAttribute="bottom" secondItem="6ab-se-fYX" secondAttribute="bottom" constant="32" id="s1o-jX-PP3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Klu-Jz-beF"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu3-2C-ee5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="-227"/>
+        </scene>
+    </scenes>
+</document>
