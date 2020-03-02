@@ -20,6 +20,8 @@
 		D4B9D304240DCCE2005E95EC /* StoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D303240DCCE2005E95EC /* StoryPageViewController.swift */; };
 		D4B9D306240DCCF6005E95EC /* Pages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D305240DCCF6005E95EC /* Pages.storyboard */; };
 		D4B9D308240DCE26005E95EC /* StoryImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D307240DCE26005E95EC /* StoryImageViewController.swift */; };
+		D4B9D30A240DCEC1005E95EC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D309240DCEC1005E95EC /* Book.swift */; };
+		D4B9D30C240DD074005E95EC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D30B240DD074005E95EC /* BookManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		D4B9D303240DCCE2005E95EC /* StoryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryPageViewController.swift; sourceTree = "<group>"; };
 		D4B9D305240DCCF6005E95EC /* Pages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pages.storyboard; sourceTree = "<group>"; };
 		D4B9D307240DCE26005E95EC /* StoryImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImageViewController.swift; sourceTree = "<group>"; };
+		D4B9D309240DCEC1005E95EC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		D4B9D30B240DD074005E95EC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				D4B9D2FF240DB3E5005E95EC /* DeviceInformation.swift */,
+				D4B9D309240DCEC1005E95EC /* Book.swift */,
+				D4B9D30B240DD074005E95EC /* BookManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,8 +200,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B9D30A240DCEC1005E95EC /* Book.swift in Sources */,
 				D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */,
 				D4B9D304240DCCE2005E95EC /* StoryPageViewController.swift in Sources */,
+				D4B9D30C240DD074005E95EC /* BookManager.swift in Sources */,
 				D4B9D308240DCE26005E95EC /* StoryImageViewController.swift in Sources */,
 				D4B9D300240DB3E5005E95EC /* DeviceInformation.swift in Sources */,
 				D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */,
