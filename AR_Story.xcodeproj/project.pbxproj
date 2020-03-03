@@ -22,6 +22,9 @@
 		D4B9D308240DCE26005E95EC /* StoryImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D307240DCE26005E95EC /* StoryImageViewController.swift */; };
 		D4B9D30A240DCEC1005E95EC /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D309240DCEC1005E95EC /* Book.swift */; };
 		D4B9D30C240DD074005E95EC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D30B240DD074005E95EC /* BookManager.swift */; };
+		D4B9D30F240DD2F6005E95EC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D30E240DD2F6005E95EC /* JSON.swift */; };
+		D4B9D311240EA040005E95EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D310240EA040005E95EC /* Constants.swift */; };
+		D4B9D314240EA602005E95EC /* books.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D313240EA602005E95EC /* books.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		D4B9D307240DCE26005E95EC /* StoryImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryImageViewController.swift; sourceTree = "<group>"; };
 		D4B9D309240DCEC1005E95EC /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		D4B9D30B240DD074005E95EC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
+		D4B9D30E240DD2F6005E95EC /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		D4B9D310240EA040005E95EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4B9D313240EA602005E95EC /* books.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = books.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +107,12 @@
 		D4B9D2FB240DB212005E95EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D4B9D312240EA5ED005E95EC /* Data */,
+				D4B9D30D240DD2BC005E95EC /* Utils */,
 				D4B9D2FF240DB3E5005E95EC /* DeviceInformation.swift */,
 				D4B9D309240DCEC1005E95EC /* Book.swift */,
 				D4B9D30B240DD074005E95EC /* BookManager.swift */,
+				D4B9D310240EA040005E95EC /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +133,22 @@
 				D4B9D305240DCCF6005E95EC /* Pages.storyboard */,
 			);
 			path = Pages;
+			sourceTree = "<group>";
+		};
+		D4B9D30D240DD2BC005E95EC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9D30E240DD2F6005E95EC /* JSON.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D4B9D312240EA5ED005E95EC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9D313240EA602005E95EC /* books.txt */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69989E7323D93DBA00093D37 /* art.scnassets in Resources */,
+				D4B9D314240EA602005E95EC /* books.txt in Resources */,
 				D4B9D2FA240D7327005E95EC /* BookView.xib in Resources */,
 				D48DD9C823D8CCCB001AD2AC /* LaunchScreen.storyboard in Resources */,
 				D48DD9C523D8CCCB001AD2AC /* Assets.xcassets in Resources */,
@@ -201,6 +227,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B9D30A240DCEC1005E95EC /* Book.swift in Sources */,
+				D4B9D311240EA040005E95EC /* Constants.swift in Sources */,
+				D4B9D30F240DD2F6005E95EC /* JSON.swift in Sources */,
 				D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */,
 				D4B9D304240DCCE2005E95EC /* StoryPageViewController.swift in Sources */,
 				D4B9D30C240DD074005E95EC /* BookManager.swift in Sources */,
