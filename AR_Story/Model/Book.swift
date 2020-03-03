@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Book {
+struct Book: Codable {
     let title: String
     let chapters: [Chapter]
     let coverImageName: String
 }
 
-struct Chapter {
+struct Chapter: Codable {
     let story: String
     let imageName: String
     let keyWords: [String]
