@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Book Collection View Controller-->
         <scene sceneID="EJE-fg-Jrn">
             <objects>
-                <viewController id="etV-zf-UbO" sceneMemberID="viewController">
+                <viewController id="etV-zf-UbO" customClass="BookCollectionViewController" customModule="AR_Story" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NEm-fK-OvH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
