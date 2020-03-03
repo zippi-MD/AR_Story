@@ -14,17 +14,16 @@ protocol BookManagerDelegate: class {
 
 class BookManager {
     static let sharedInstance = BookManager()
-    private(set) var bookCollection: [Book]? {
-        willSet {
-            let success = newValue != nil ? true : false
-            delegate?.didFinishLoadingBooks(success: success)
-        }
-    }
+    private(set) var bookCollection = [Book]()
     
     weak var delegate: BookManagerDelegate?
     
-    init() {
-        bookCollection = readBooksFromFile()
+    public func loadBookCollection(){
+        if let bookCollection = readBooksFromFile() {
+            self.bookCollection = bookCollection
+            delegate?.didFinishLoadingBooks(success: true)
+        }
+        delegate?.didFinishLoadingBooks(success: false)
     }
     
     private func readBooksFromFile() -> [Book]?{

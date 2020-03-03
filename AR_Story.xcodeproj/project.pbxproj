@@ -25,6 +25,7 @@
 		D4B9D30F240DD2F6005E95EC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D30E240DD2F6005E95EC /* JSON.swift */; };
 		D4B9D311240EA040005E95EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D310240EA040005E95EC /* Constants.swift */; };
 		D4B9D314240EA602005E95EC /* books.txt in Resources */ = {isa = PBXBuildFile; fileRef = D4B9D313240EA602005E95EC /* books.txt */; };
+		D4B9D317240EC909005E95EC /* BookCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9D316240EC909005E95EC /* BookCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		D4B9D30E240DD2F6005E95EC /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		D4B9D310240EA040005E95EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D4B9D313240EA602005E95EC /* books.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = books.txt; sourceTree = "<group>"; };
+		D4B9D316240EC909005E95EC /* BookCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		D48DD9BA23D8CCC7001AD2AC /* AR_Story */ = {
 			isa = PBXGroup;
 			children = (
+				D4B9D315240EC8EC005E95EC /* Controller */,
 				D4B9D301240DCCA8005E95EC /* Views */,
 				D4B9D2FB240DB212005E95EC /* Model */,
 				D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */,
@@ -149,6 +152,14 @@
 				D4B9D313240EA602005E95EC /* books.txt */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		D4B9D315240EC8EC005E95EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D4B9D316240EC909005E95EC /* BookCollectionViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */,
 				D48DD9BE23D8CCC7001AD2AC /* SceneDelegate.swift in Sources */,
 				D4B9D2F8240D7312005E95EC /* BookView.swift in Sources */,
+				D4B9D317240EC909005E95EC /* BookCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
