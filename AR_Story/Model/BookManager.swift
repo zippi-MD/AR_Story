@@ -8,9 +8,20 @@
 
 import Foundation
 
+protocol BookManagerDelegate: class {
+    func didFinishLoadingBooks(success: Bool) -> Void
+}
+
 class BookManager {
     static let sharedInstance = BookManager()
-    private(set) var bookCollection: [Book]?
+    private(set) var bookCollection: [Book]? {
+        willSet {
+            let success = newValue != nil ? true : false
+            delegate?.didFinishLoadingBooks(success: success)
+        }
+    }
+    
+    weak var delegate: BookManagerDelegate?
     
     init() {
         bookCollection = readBooksFromFile()
