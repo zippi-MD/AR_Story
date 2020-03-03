@@ -6,9 +6,10 @@
 //  Copyright © 2020 Alejandro Mendoza. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
     static let booksFileName = "books"
     static let booksExtention = "txt"
+    static let cornerRadius: CGFloat = 4.0
 }
