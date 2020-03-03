@@ -10,6 +10,36 @@ import UIKit
 
 class BookCoverCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet private weak var coverImageView: UIImageView!
+    @IBOutlet private weak var coverTitleLabel: UILabel!
+    @IBOutlet private weak var coverBackgroundView: UIView!
+    
+    public var title: String? {
+        didSet {
+            coverTitleLabel.text = title
+        }
+    }
+    
+    public var image: UIImage? {
+        didSet {
+            coverImageView.image = image
+        }
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        customInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        customInit()
+    }
+    
+    private func customInit() {
+        coverBackgroundView.layer.cornerRadius = Constants.cornerRadius
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
