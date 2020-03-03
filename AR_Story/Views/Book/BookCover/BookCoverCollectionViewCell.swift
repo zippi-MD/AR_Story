@@ -12,7 +12,11 @@ class BookCoverCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var coverImageView: UIImageView!
     @IBOutlet private weak var coverTitleLabel: UILabel!
-    @IBOutlet private weak var coverBackgroundView: UIView!
+    @IBOutlet private weak var coverBackgroundView: UIView! {
+        didSet {
+             coverBackgroundView.layer.cornerRadius = Constants.cornerRadius
+        }
+    }
     
     public var title: String? {
         didSet {
@@ -37,7 +41,7 @@ class BookCoverCollectionViewCell: UICollectionViewCell {
     }
     
     private func customInit() {
-        coverBackgroundView.layer.cornerRadius = Constants.cornerRadius
+       
     }
     
     override func awakeFromNib() {

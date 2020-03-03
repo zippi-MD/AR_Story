@@ -12,4 +12,5 @@ struct Constants {
     static let booksFileName = "books"
     static let booksExtention = "txt"
     static let cornerRadius: CGFloat = 4.0
+    static let BookCoverCellIdentifier = "BookCoverCell"
 }
