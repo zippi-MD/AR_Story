@@ -13,6 +13,7 @@ class BookCollectionViewController: UIViewController {
     @IBOutlet weak var booksCollectionView: UICollectionView!
     
     var bookManager: BookManager = BookManager.sharedInstance
+    var selectedIndex: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,12 @@ class BookCollectionViewController: UIViewController {
         booksCollectionView.delegate = self
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailBookViewController,
+            let index = selectedIndex {
+            destination.book = bookManager.bookCollection[index.row]
+        }
+    }
 
 }
 
@@ -65,6 +71,7 @@ extension BookCollectionViewController: UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedIndex = indexPath
         performSegue(withIdentifier: "BookCollectionToBookDetailView", sender: nil)
     }
     

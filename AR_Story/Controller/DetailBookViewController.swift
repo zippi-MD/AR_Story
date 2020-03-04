@@ -23,8 +23,25 @@ class DetailBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if book == nil { dismissButtonTapped(nil)}
+    }
+    
+    private func setupUI(){
+        if let book = book {
+            coverImageView.image = UIImage(named: book.coverImageName)
+            bookTitleLabel.text = book.title
+        }
+    }
 
-    @IBAction func dismissButtonTapped(_ sender: Any) {
+    @IBAction func dismissButtonTapped(_ sender: Any?) {
         dismiss(animated: true, completion: nil)
     }
 }
