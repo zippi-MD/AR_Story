@@ -24,4 +24,7 @@ class DetailBookViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
