@@ -40,8 +40,18 @@ class DetailBookViewController: UIViewController {
             bookTitleLabel.text = book.title
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailToLectureSegue" {
+            
+        }
+    }
 
     @IBAction func dismissButtonTapped(_ sender: Any?) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func startReadingButtonTapped(_ sender: Any?) {
+        performSegue(withIdentifier: "DetailToLectureSegue", sender: nil)
     }
 }
