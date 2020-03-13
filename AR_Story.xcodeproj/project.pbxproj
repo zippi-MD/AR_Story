@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69989E7323D93DBA00093D37 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 69989E7223D93DBA00093D37 /* art.scnassets */; };
+		699CF305241BDDB1006EB2F2 /* CharacterClassNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699CF304241BDDB1006EB2F2 /* CharacterClassNew.swift */; };
 		D48DD9BC23D8CCC7001AD2AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */; };
 		D48DD9BE23D8CCC7001AD2AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BD23D8CCC7001AD2AC /* SceneDelegate.swift */; };
 		D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48DD9BF23D8CCC7001AD2AC /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		69989E7223D93DBA00093D37 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		699CF304241BDDB1006EB2F2 /* CharacterClassNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassNew.swift; sourceTree = "<group>"; };
 		D48DD9B823D8CCC7001AD2AC /* AR_Story.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Story.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48DD9BB23D8CCC7001AD2AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D48DD9BD23D8CCC7001AD2AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				D48DD9C623D8CCCB001AD2AC /* LaunchScreen.storyboard */,
 				D48DD9C923D8CCCB001AD2AC /* Info.plist */,
 				69989E7223D93DBA00093D37 /* art.scnassets */,
+				699CF304241BDDB1006EB2F2 /* CharacterClassNew.swift */,
 			);
 			path = AR_Story;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				D48DD9C023D8CCC7001AD2AC /* ViewController.swift in Sources */,
 				D4B9D304240DCCE2005E95EC /* StoryPageViewController.swift in Sources */,
 				D4B9D30C240DD074005E95EC /* BookManager.swift in Sources */,
+				699CF305241BDDB1006EB2F2 /* CharacterClassNew.swift in Sources */,
 				D4B9D308240DCE26005E95EC /* StoryImageViewController.swift in Sources */,
 				D4B9D300240DB3E5005E95EC /* DeviceInformation.swift in Sources */,
 				D4B9D31B240ED46D005E95EC /* BookCoverCollectionViewCell.swift in Sources */,

@@ -12,12 +12,11 @@ import ARKit
 class ViewController: UIViewController , ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     
-    let idleAnimation = loadAnimation(fromSceneNamed: "art.scnassets/character/max_idle.scn")
-           
-    let walkAnimation = loadAnimation(fromSceneNamed: "art.scnassets/character/max_walk.scn")
+   
     
     var batmanNode = SCNScene(named: "art.scnassets/obj/batman.scn")?.rootNode.childNodes[0]
-    var foxNode =  SCNScene(named: "art.scnassets/character/max.scn")?.rootNode.childNodes[0]
+    var foxNode =  FoxCharacter()
+    var distance: Float = 0.01
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +70,10 @@ class ViewController: UIViewController , ARSCNViewDelegate {
             var temporalNode: SCNNode?
            
             if (imageAnchor.referenceImage.name == "libro 3"){
-                foxNode?.scale = SCNVector3(0.2,0.2,0.2)
-                foxNode?.addAnimationPlayer(idleAnimation, forKey: "idle")
-                temporalNode = foxNode
+                foxNode.node?.scale = SCNVector3(0.2,0.2,0.2)
+            foxNode.node?.addAnimationPlayer(foxNode.idleAnimation, forKey: "idle")
+                               
+                temporalNode = foxNode.node
                 
                 
             }else if (imageAnchor.referenceImage.name == "pikachu"){
@@ -117,7 +117,7 @@ class ViewController: UIViewController , ARSCNViewDelegate {
                   
                    
                       result.node.parent?.removeAllAnimations()
-                      result.node.parent?.addAnimationPlayer(walkAnimation, forKey: "walk")
+                      
                       
                   }
                    
@@ -145,16 +145,4 @@ class ViewController: UIViewController , ARSCNViewDelegate {
     
 }
 
-//----------Animations----------
- func loadAnimation(fromSceneNamed sceneName: String) -> SCNAnimationPlayer {
-    let scene = SCNScene( named: sceneName )!
-    // find top level animation
-    var animationPlayer: SCNAnimationPlayer! = nil
-    scene.rootNode.enumerateChildNodes { (child, stop) in
-        if !child.animationKeys.isEmpty {
-            animationPlayer = child.animationPlayer(forKey: child.animationKeys[0])
-            stop.pointee = true
-        }
-    }
-    return animationPlayer
-}
+
