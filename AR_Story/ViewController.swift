@@ -33,12 +33,36 @@ class ViewController: UIViewController , ARSCNViewDelegate {
         super.viewDidLoad()
         
         sceneView.delegate = self
+        //---
+        // check if the user gave permission to use the microphone
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+
+                  OperationQueue.main.addOperation {
+                      switch authStatus {
+                      case .authorized:
+                          
+                          self.TextViewOfStory.text = "Hello!  Show the special card"
+                          do {try self.startRecording()} catch {}
+                          
+                      default:
+                          self.TextViewOfStory.text = "Error AuthStatus"
+                      }
+                  }
+        }
         
+        
+        //---
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tapGesture)
     }
 
-
+    override public func viewDidAppear(_ animated: Bool) {
+               super.viewDidAppear(animated)
+               
+               speechRecognizer.delegate = self
+               authorizationState()
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
           super.viewWillAppear(animated)
           
