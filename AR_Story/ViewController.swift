@@ -8,11 +8,21 @@
 
 import UIKit
 import ARKit
+import Speech
 
 class ViewController: UIViewController , ARSCNViewDelegate {
-    @IBOutlet weak var sceneView: ARSCNView!
     
-   
+    @IBOutlet weak var sceneView: ARSCNView!
+    @IBOutlet weak var TextViewOfStory: UITextView!
+    
+    //"es-ES" Spanish
+    //"en-US" English USA
+    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "es-ES"))!
+    var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
+    var recognitionTask: SFSpeechRecognitionTask?
+    var audioEngine = AVAudioEngine()
+    
+    
     
     var batmanNode = SCNScene(named: "art.scnassets/obj/batman.scn")?.rootNode.childNodes[0]
     var foxNode =  FoxCharacter()
