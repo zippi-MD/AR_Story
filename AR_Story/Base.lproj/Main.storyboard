@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="etV-zf-UbO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad10_5" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -20,8 +20,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
                             </arscnView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hola  ¿Estas listo para empezar?  Coloca la carta" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkx-GR-REF">
-                                <rect key="frame" x="20" y="918" width="794" height="152"/>
+                                <rect key="frame" x="20" y="940" width="794" height="152"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="c5q-l4-2HA"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -29,14 +32,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="nkx-GR-REF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="918" id="05I-q2-Kl4"/>
-                            <constraint firstItem="nkx-GR-REF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8VO-yQ-89N"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nkx-GR-REF" secondAttribute="bottom" constant="42" id="Kga-aE-TDa"/>
-                            <constraint firstItem="VTH-ui-jjf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="S8w-wV-BFe"/>
-                            <constraint firstItem="VTH-ui-jjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UDh-D0-4XN"/>
-                            <constraint firstItem="nkx-GR-REF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WA6-KF-F37"/>
-                            <constraint firstItem="VTH-ui-jjf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ejb-zO-VS7"/>
-                            <constraint firstItem="VTH-ui-jjf" firstAttribute="centerX" secondItem="nkx-GR-REF" secondAttribute="centerX" id="yFE-gj-xld"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nkx-GR-REF" secondAttribute="bottom" constant="20" id="8iA-LY-raa"/>
+                            <constraint firstItem="VTH-ui-jjf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kgf-Y0-pCl"/>
+                            <constraint firstItem="nkx-GR-REF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OnG-9d-Ami"/>
+                            <constraint firstItem="VTH-ui-jjf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S7y-ZC-m7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nkx-GR-REF" secondAttribute="trailing" constant="20" id="YSL-5q-ZPV"/>
+                            <constraint firstItem="VTH-ui-jjf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g8U-UI-e7B"/>
+                            <constraint firstItem="VTH-ui-jjf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uEf-V9-OxS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
